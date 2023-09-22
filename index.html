@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<title>Index</title> 
+<link rel="stylesheet" type="text/css" href="style.css"> </head>
+<link rel="icon" type="png" sizes="32x32" href="icon.png">
+</head>
+<body>
+<header>
+<a href="#" class="logo">Logo</a>
+<ul>
+<li><a href="#" class="active">Home</a></li> 
+<li><a href="#sec">About</a></li> 
+<li><a href="ser.html">Service</a></li> 
+<li><a href="cont.html">Contact</a></li> 
+</ul>
+</header>
+<section>
+    <img src="stars.png" id="stars">
+    <img src="moon.png" id="moon">
+    <img src="mountains_behind.png" id="mountains_behind">
+    <h2 id="text">Want to Join</h2>
+    <a href="cont.html" id="btn">Login</a>
+    <img src="mountains_front.png" id="mountains_front">
+</section>
+<div class="sec" id="sec">
+    <h2>About Us</h2>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+        dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+    </p>
+</div>
+
+<script>
+    let stars = document.getElementById('stars');
+    let moon = document.getElementById('moon');
+    let mountains_behind = document.getElementById('mountains_behind');
+    let text = document.getElementById('text');
+    let btn = document.getElementById('btn');
+    let header = document.querySelector('header');
+
+    window.addEventListener('scroll', function(){
+        let value = window.scrollY;
+        stars.style.left = value * 0.25 + 'px';
+        moon.style.top = value * 1.05 + 'px';
+        mountains_behind.style.top = value * 0.5 + 'px';
+        text.style.marginRight = value * 4 + 'px';
+        text.style.marginTop = value * 1.5 + 'px';
+        btn.style.marginTop = value * 1.5 + 'px';
+        header.style.top = value * 0.5 + 'px';
+    })
+</script>
+<div class="social-links">
+    <a href="#"><img src="facebook.png"></a>
+    <a href="#"><img src="instagram.png"></a>
+    <a href="#"><img src="twitter.png"></a>
+    <a href="#"><img src="youtube.png"></a>
+    <a href="#"><img src="whatsapp.png"></a>
+
+</div>
+</body>
+</html>
